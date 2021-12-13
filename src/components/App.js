@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import api from '../utils/api';
+import auth from '../utils/auth';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -41,7 +42,7 @@ function App() {
     const token = localStorage.getItem('token');
 
     if (token) {
-      api.getUserData(token)
+      auth.getUserData(token)
         .then(data => {
           setLoggedIn(true);
           setEmail(data.data.email);
@@ -91,9 +92,8 @@ function App() {
   ]);
 
   function onRegister({email, password}) {
-    api.registrationUser({email, password})
+    auth.registrationUser({email, password})
       .then(() => {
-        setIsNoticePopupOpen(true);
         setNoticeName('accepted');
         setTimeout(() => {
           navigate('/sign-in');
@@ -102,13 +102,13 @@ function App() {
       })
       .catch(err => {
         console.log(`Упс. Что-то пошло не так. Ошибка: ${err}`);
-        setIsNoticePopupOpen(true);
         setNoticeName('rejected');
-      });
+      })
+      .finally(() => setIsNoticePopupOpen(true));
   }
 
   function onLogin({email, password}) {
-    api.authorizationUser({email, password})
+    auth.authorizationUser({email, password})
       .then(data => {
         localStorage.setItem('token', data.token);
         setLoggedIn(true);

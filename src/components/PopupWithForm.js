@@ -19,14 +19,9 @@ function PopupWithForm(props) {
           aria-label="кнопка Закрыть"
           onClick={props.onClose}
         ></button>
-        { props.image ?
-          <img className="form__image" src={props.image} alt={props.name} />
-        : '' }
         <h2 className={`form__title${props.titleModifier}`}>{props.title}</h2>
         <form
-          className={`form__${props.name} form-area${
-            props.disabled ? props.disabled : ''
-          }`}
+          className={`form__${props.name} form-area`}
           name={props.name}
           noValidate
           onSubmit={props.onSubmit}

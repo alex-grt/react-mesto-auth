@@ -3,7 +3,6 @@ class Api {
   constructor(config) {
     this._baseUrl = config.baseUrl;
     this._headers = config.headers;
-    this._authUrl = 'https://auth.nomoreparties.co';
   }
 
   /* обработка запроса */
@@ -13,38 +12,6 @@ class Api {
     }
 
     return Promise.reject(res.status);
-  }
-
-  /* запрос на регистрацию пользователя */
-  registrationUser({email, password}) {
-    return fetch(`${this._authUrl}/signup`, {
-      method: 'POST',
-      headers: {"content-type": "application/json"},
-      body: JSON.stringify({email, password})
-    })
-    .then(this._handleRequest);
-  }
-
-  /* запрос на авторизацию пользователя */
-  authorizationUser({email, password}) {
-    return fetch(`${this._authUrl}/signin`, {
-      method: 'POST',
-      headers: {"content-type": "application/json"},
-      body: JSON.stringify({email, password})
-    })
-    .then(this._handleRequest);
-  }
-
-  /* запрос данных пользователя */
-  getUserData(token) {
-    return fetch(`${this._authUrl}/users/me`, {
-      method: 'GET',
-      headers: {
-        "content-type": "application/json",
-        "authorization": `Bearer ${token}`
-      }
-    })
-    .then(this._handleRequest);
   }
 
   /* консолидация запросов на получение информации */
