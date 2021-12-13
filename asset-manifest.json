@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-mesto-auth/static/css/main.46450a1e.chunk.css",
-    "main.js": "/react-mesto-auth/static/js/main.36d21ee7.chunk.js",
-    "main.js.map": "/react-mesto-auth/static/js/main.36d21ee7.chunk.js.map",
+    "main.css": "/react-mesto-auth/static/css/main.760b5f44.chunk.css",
+    "main.js": "/react-mesto-auth/static/js/main.85417ec6.chunk.js",
+    "main.js.map": "/react-mesto-auth/static/js/main.85417ec6.chunk.js.map",
     "runtime-main.js": "/react-mesto-auth/static/js/runtime-main.f64a21c5.js",
     "runtime-main.js.map": "/react-mesto-auth/static/js/runtime-main.f64a21c5.js.map",
-    "static/js/2.e0dbb8dd.chunk.js": "/react-mesto-auth/static/js/2.e0dbb8dd.chunk.js",
-    "static/js/2.e0dbb8dd.chunk.js.map": "/react-mesto-auth/static/js/2.e0dbb8dd.chunk.js.map",
+    "static/js/2.ddebd72e.chunk.js": "/react-mesto-auth/static/js/2.ddebd72e.chunk.js",
+    "static/js/2.ddebd72e.chunk.js.map": "/react-mesto-auth/static/js/2.ddebd72e.chunk.js.map",
     "static/js/3.81c7681f.chunk.js": "/react-mesto-auth/static/js/3.81c7681f.chunk.js",
     "static/js/3.81c7681f.chunk.js.map": "/react-mesto-auth/static/js/3.81c7681f.chunk.js.map",
     "index.html": "/react-mesto-auth/index.html",
-    "static/css/main.46450a1e.chunk.css.map": "/react-mesto-auth/static/css/main.46450a1e.chunk.css.map",
-    "static/js/2.e0dbb8dd.chunk.js.LICENSE.txt": "/react-mesto-auth/static/js/2.e0dbb8dd.chunk.js.LICENSE.txt",
+    "static/css/main.760b5f44.chunk.css.map": "/react-mesto-auth/static/css/main.760b5f44.chunk.css.map",
+    "static/js/2.ddebd72e.chunk.js.LICENSE.txt": "/react-mesto-auth/static/js/2.ddebd72e.chunk.js.LICENSE.txt",
     "static/media/index.css": "/react-mesto-auth/static/media/button-like.87ed3714.svg",
     "static/media/logo.1f1e9591.svg": "/react-mesto-auth/static/media/logo.1f1e9591.svg",
     "static/media/reg-accepted.1b6082f8.svg": "/react-mesto-auth/static/media/reg-accepted.1b6082f8.svg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f64a21c5.js",
-    "static/js/2.e0dbb8dd.chunk.js",
-    "static/css/main.46450a1e.chunk.css",
-    "static/js/main.36d21ee7.chunk.js"
+    "static/js/2.ddebd72e.chunk.js",
+    "static/css/main.760b5f44.chunk.css",
+    "static/js/main.85417ec6.chunk.js"
   ]
 }
