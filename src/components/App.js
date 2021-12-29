@@ -55,13 +55,15 @@ function App() {
   }, []);
 
   React.useEffect(() => {
-    api.getPageInfo()
-      .then(([user, cards]) => {
-        setCurrentUser(user);
-        setCards(cards);
-      })
-      .catch(err => alert(`Не удалось получить информацию. Ошибка: ${err}`));
-  }, []);
+    if (loggedIn) {
+      api.getPageInfo()
+        .then(([user, cards]) => {
+          setCurrentUser(user);
+          setCards(cards);
+        })
+        .catch(err => alert(`Не удалось получить информацию. Ошибка: ${err}`));
+    }
+  }, [loggedIn]);
 
   React.useEffect(() => {
     if (
